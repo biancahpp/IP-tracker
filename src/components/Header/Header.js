@@ -1,40 +1,50 @@
-import { React } from 'react';
+/* eslint-disable react/prop-types */
+import { React, useState } from 'react';
 import './styles.css';
 
-export default function Header({
-  // eslint-disable-next-line react/prop-types
-  details, ip, city, state, country, postalCode, timezone, isp,
-}) {
+export default function Header(details) {
+  const [ipAddress, setIpAddress] = useState(details.details.ip);
+
+  function findIP(e) {
+    e.preventDefault();
+    details.trackIP(ipAddress);
+  }
   return (
     <div className="headerWrapper">
-      <form>
+      <form onSubmit={(e) => findIP(e)}>
         <h1>IP Adress Tracker</h1>
-        <input type="text" />
-        <button type="button"> Botao </button>
+        <input
+          type="text"
+          placeholder="Track an IP..."
+          onChange={(e) => {
+            setIpAddress(e.target.value);
+          }}
+        />
+        <button type="submit"> Botao </button>
       </form>
       <div className="locationInfo">
         {details
           ? (
             <div>
               IP ADDRESS
-              {ip}
+              {details.details.ip}
               {' '}
               LOCATION
-              {city}
+              {details.details.location.city}
               ,
-              {state}
+              {details.details.location.region}
               {' '}
-              {country}
+              {details.details.location.country}
               {' '}
-              {postalCode}
+              {details.details.location.postalCode}
               {' '}
               TIMEZONE
               {' '}
-              {timezone}
+              {details.details.location.timezone}
               {' '}
               ISP
               {' '}
-              {isp}
+              {details.details.isp}
             </div>
           )
 

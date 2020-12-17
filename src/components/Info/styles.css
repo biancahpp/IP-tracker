@@ -1,0 +1,54 @@
+.infoWrapper{
+  background: white;
+  height: 130px;
+  width: 60vw;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: 50%;
+  transform: translateX(50%);
+
+}
+
+.ipWrapper{
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid grey;
+  padding: 20px;
+  width: 25%;
+  height: 65%;
+
+}
+
+.locationWrapper{
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid grey;
+  padding: 20px;
+  width: 25%;
+  height: 65%;
+}
+
+.infoWrapper p{
+  color: grey;
+}
+
+.timezoneWrapper{
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid grey;
+  padding: 20px;
+  width: 25%;
+  height: 65%;
+}
+
+.ispWrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 25%;
+  height: 65%;
+}

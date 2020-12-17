@@ -1,6 +1,9 @@
 .wrapperMap{
   width: 100vw;
   height: 70vh;
+  bottom: 0;
+  position: absolute;
+  z-index: 0;
 }
 
 .mapStyles{

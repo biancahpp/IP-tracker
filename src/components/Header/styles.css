@@ -1,4 +1,4 @@
-.headerWrapper{
+/* .headerWrapper{
   width: 100vw;
   height: 30vh;
   background: url("../../images/pattern-bg.png");
@@ -8,9 +8,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-  top: 0;
-  z-index: 0; */
 }
 .headerWrapper form{
   position: relative;
@@ -48,7 +45,7 @@
 .arrowIcon {
   width: 20px;
   height: 20px;
-}
+} */
 
 
 

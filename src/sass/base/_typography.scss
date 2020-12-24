@@ -1,0 +1,58 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.7; /* it means it's 1.7x bigger then the predefined line height*/
+  color: $dark-grey;
+}
+
+.App__header-box {
+  text-align: center;
+
+  position: absolute;
+  // transform: translate(-50%, -50%);
+  top: 30%;
+  z-index: 999; //higher than map default z-index
+
+  .header{
+    // position: absolute;
+    // transform: translate(-50%, -50%);
+    // top: 10%;
+    // left: 50%;
+    .heading-primary{
+      color: $white;
+      font-size: 3rem;
+      font-weight: 500;
+      padding: 2rem;
+    }
+  }
+  .info{
+    width: 80vw;
+    border-radius: 1.5rem;
+    background-color:$white;
+    display: inline-block;
+
+    // position: absolute;
+    // transform: translate(-50%, -50%);
+    // top: 30%;
+    // z-index: 999; //higher than map default z-index
+    span {
+      color: $grey;
+      display: block;
+    }
+  }
+  input {
+    width: 60rem;
+    height: 6rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    border: none;
+  }
+  .btn--form {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    border: none;
+    background-color: $dark-grey;
+  }
+  .icon {
+    color: $white;
+  }
+}

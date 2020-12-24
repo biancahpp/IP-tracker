@@ -1,0 +1,21 @@
+*,
+*::after, /*to reset all including pseudo-elements*/
+*::before {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*the browser default will be 16px so divide the number of pixels you want by 16 and put the total in percentage, this will make so the user can increase the font-size to their liking*/
+}
+
+body {
+  background: $light-grey;
+}
+
+.App{
+  position: relative;
+}
+  

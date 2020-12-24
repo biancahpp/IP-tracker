@@ -1,18 +1,17 @@
 import React from 'react';
-import './styles.css';
 
 export default function Info(details) {
   return (
-    <div className="locationInfo">
+    <div className="info">
       {details
         ? (
-          <div className="infoWrapper">
-            <div className="ipWrapper">
-              <p>IP ADDRESS</p>
+          <div className="info__info-box">
+            <div className="info-box--ip">
+              <span>IP ADDRESS</span>
               {details.details.ip}
             </div>
-            <div className="locationWrapper">
-              <p>LOCATION</p>
+            <div className="info-box--location">
+              <span>LOCATION</span>
               {details.details.location.city}
               ,
               {' '}
@@ -22,12 +21,12 @@ export default function Info(details) {
               {' '}
               {details.details.location.postalCode}
             </div>
-            <div className="timezoneWrapper">
-              <p>TIMEZONE</p>
+            <div className="info-box--timezone">
+              <span>TIMEZONE</span>
               {details.details.location.timezone}
             </div>
-            <div className="ispWrapper">
-              <p>ISP</p>
+            <div className="info-box--isp">
+              <span>ISP</span>
               {details.details.isp}
             </div>
           </div>

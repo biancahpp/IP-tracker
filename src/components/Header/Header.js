@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { React, useState } from 'react';
-import './styles.css';
 import { FaChevronRight } from 'react-icons/fa';
 
 export default function Header(details) {
@@ -11,20 +10,19 @@ export default function Header(details) {
     details.trackIP(ipAddress);
   }
   return (
-    <div className="headerWrapper">
+    <div className="header">
       <form onSubmit={(e) => findIP(e)}>
-        <p className="title">IP Adress Tracker</p>
-        <div className="inputWrapper">
+        <h1 className="heading-primary">IP Address Tracker</h1>
+        <div className="header__input">
           <input
-            className="ipInput"
             type="text"
             placeholder="Track an IP..."
             onChange={(e) => {
               setIpAddress(e.target.value);
             }}
           />
-          <button type="submit">
-            <FaChevronRight className="arrowIcon" color="white" />
+          <button type="submit" className="btn btn--form">
+            <FaChevronRight className="icon icon--arrow-right" />
           </button>
         </div>
       </form>

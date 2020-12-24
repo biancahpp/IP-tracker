@@ -1,5 +1,4 @@
 import { React } from 'react';
-import './styles.css';
 import {
   MapContainer, TileLayer, Marker,
 } from 'react-leaflet';
@@ -14,8 +13,8 @@ export default function Maps(details) {
     iconSize: [40, 50],
   });
   return (
-    <div className="wrapperMap">
-      <MapContainer center={[details.details.location.lat, details.details.location.lng]} zoom={15} className="mapStyles">
+    <div className="map">
+      <MapContainer center={[details.details.location.lat, details.details.location.lng]} zoom={15} className="map__container-box">
         <ChangeView center={[details.details.location.lat, details.details.location.lng]} />
         <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker

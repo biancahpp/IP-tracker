@@ -4,8 +4,8 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
-import ChangeView from '../ChangeView/ChangeView';
-import MarkerIcon from '../../images/icon-location.svg';
+import ChangeView from './ChangeView';
+import MarkerIcon from '../images/icon-location.svg';
 
 export default function Maps(details) {
   const mapMarker = new Icon({

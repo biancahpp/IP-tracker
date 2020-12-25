@@ -1,5 +1,5 @@
 *,
-*::after, /*to reset all including pseudo-elements*/
+*::after,
 *::before {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
 }
 
 html {
-  font-size: 62.5%; /*the browser default will be 16px so divide the number of pixels you want by 16 and put the total in percentage, this will make so the user can increase the font-size to their liking*/
+  font-size: 62.5%;
 }
 
 body {

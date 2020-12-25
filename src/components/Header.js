@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { React, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
-import Info from '../Info/Info';
+import Info from './Info';
 
 export default function Header(details) {
   const [ipAddress, setIpAddress] = useState(details.details.ip);

@@ -2,6 +2,7 @@
 import { React, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import Info from './Info';
+import Loading from './Loading';
 
 export default function Header(details) {
   const [ipAddress, setIpAddress] = useState(details.details.ip);
@@ -32,8 +33,7 @@ export default function Header(details) {
           details={details.details}
         />
       )
-        : <div>Loading</div>}
-      {' '}
+        : <Loading />}
     </div>
   );
 }

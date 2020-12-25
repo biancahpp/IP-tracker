@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from './Loading';
 
 export default function Info(details) {
   return (
@@ -34,7 +35,7 @@ export default function Info(details) {
           </div>
         )
 
-        : <div> Loading </div>}
+        : <Loading />}
     </div>
   );
 }

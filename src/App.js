@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from './components/Header';
 import Maps from './components/Maps';
 import apiDisplayInfo from './services/apiClient';
+import Loading from './components/Loading';
 
 function App() {
   const [details, setDetails] = useState(null);
@@ -27,7 +28,7 @@ function App() {
             trackIP={trackIP}
           />
         ) : (
-          <div> loading</div>
+          null
         )}
       </div>
       <div className="App__map-box">
@@ -38,7 +39,7 @@ function App() {
             longitude={details.location.lng}
           />
         ) : (
-          <div>Loading</div>
+          <Loading />
         )}
       </div>
     </div>

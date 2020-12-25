@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { React, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
+import Info from '../Info/Info';
 
 export default function Header(details) {
   const [ipAddress, setIpAddress] = useState(details.details.ip);
@@ -16,7 +17,7 @@ export default function Header(details) {
         <div className="header__input">
           <input
             type="text"
-            placeholder="Track an IP..."
+            placeholder="Search for any IP address or domain"
             onChange={(e) => {
               setIpAddress(e.target.value);
             }}
@@ -26,6 +27,13 @@ export default function Header(details) {
           </button>
         </div>
       </form>
+      {details ? (
+        <Info
+          details={details.details}
+        />
+      )
+        : <div>Loading</div>}
+      {' '}
     </div>
   );
 }

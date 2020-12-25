@@ -4,7 +4,7 @@ import axios from 'axios';
 import Header from './components/Header/Header';
 import Maps from './components/Maps/Maps';
 import apiDisplayInfo from './services/apiClient';
-import Info from './components/Info/Info';
+// import Info from './components/Info/Info';
 
 function App() {
   const [details, setDetails] = useState(null);
@@ -30,12 +30,6 @@ function App() {
         ) : (
           <div> loading</div>
         )}
-        {details ? (
-          <Info
-            details={details}
-          />
-        )
-          : <div>Loading</div>}
       </div>
       <div className="App__map-box">
         {details ? (

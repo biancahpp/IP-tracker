@@ -23,6 +23,8 @@ export default function Info(details) {
             </div>
             <div className="info-box--timezone">
               <span>TIMEZONE</span>
+              UTC
+              {' '}
               {details.details.location.timezone}
             </div>
             <div className="info-box--isp">
